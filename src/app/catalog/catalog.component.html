@@ -1,0 +1,11 @@
+<div class="flex-container" >
+        <div class="card" style="width: 20%;"  *ngFor="let mov of topRatedMovies?.results,let i = index">
+            <img class="card-img-top" src={{mov.backdrop_path}}>
+            <div class="card-body">
+            <h5 class="card-title">{{mov.title}}</h5>
+            <app-rating class="card-text rate" [rating]="mov.vote_average" ></app-rating>
+            <p class="card-text">{{mov.overview}}</p>
+            <a [routerLink]="['./',mov.id] "class="btn btn-primary">Details</a>
+            </div>
+        </div>
+</div>
