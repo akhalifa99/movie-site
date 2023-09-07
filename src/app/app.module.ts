@@ -12,11 +12,11 @@ import { RatingComponent } from './rating/rating.component';
 import { DetailsComponent } from './details/details.component';
 import { authGuard } from './guard/auth.guard';
 
-const appRoutes: Routes = [
-  {path:'', component: LoginComponent},
-  {path:'catalog', component: CatalogComponent,canActivate:[authGuard]},
-  {path:'catalog/:id', component: DetailsComponent,canActivate:[authGuard]}
-];
+// const appRoutes: Routes = [
+//   {path:'', component: LoginComponent},
+//   {path:'catalog', component: CatalogComponent,canActivate:[authGuard]},
+//   {path:'catalog/:id', component: DetailsComponent,canActivate:[authGuard]}
+// ];
 
 @NgModule({
   declarations: [
@@ -30,12 +30,13 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    HttpClientModule
     
     
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

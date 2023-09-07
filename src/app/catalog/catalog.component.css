@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
 }
-.card{
+
+.card1{
     position: relative;
 }
 
