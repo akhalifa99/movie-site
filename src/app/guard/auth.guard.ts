@@ -12,6 +12,6 @@ export const authGuard: CanActivateFn = (route, state) => {
   else{
     alert('access denied, you need to login')
     router.navigate([''])
-    return true
+    return false
   }
 };
