@@ -25,12 +25,14 @@ describe('CatalogComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
   it('check movie list', () => {
     let loginService= fixture.debugElement.injector.get(LoginService)
     loginService.logged=true
-    const element:DebugElement[]=fixture.debugElement.queryAll(By.css('.card1'));
-    fixture.detectChanges();
-    console.log(loginService.logged)
+    
+    component.showTopRated
+    const element:DebugElement[]=fixture.debugElement.queryAll(By.css('div.card'));
+    fixture.detectChanges();  
     expect(element.length).toEqual(20)
   });
 });
