@@ -26,9 +26,11 @@ export class LoginService{
     for(let i=0;i<Object.keys(users).length-2;i++){
         if(email===users[i].email&&passwd===users[i].password){
             this.logged=true;
+            localStorage.setItem('logged',''+this.logged)
             return true
         }}
         this.logged=false;
+        localStorage.setItem('logged',''+this.logged)
         return false
     }
     

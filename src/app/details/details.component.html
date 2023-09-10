@@ -1,11 +1,12 @@
-<div class="backdb">
-<div class="backdb">
-    <img src={{movie?.backdrop_path}} class="img-fluid">
+<html>
+<app-logout></app-logout>
+
+<div class="mgt-2">
+    <img src={{movie?.backdrop_path}} >
     <h1 >{{movie?.original_title}}  <small class="opacity-75">({{movie?.vote_average}})</small></h1>
-    <h3>{{movie?.overview}}</h3>
- 
+    <h4>{{movie?.overview}}</h4>
 </div>
-<div class="backdb d-flex flex-wrap ">
+<div class="d-flex flex-wrap ">
    <div class="half align-self-baseline"> 
     <h3>Genres:</h3>
     <ul >
@@ -18,12 +19,13 @@
     <div class="half align-self-baseline"> 
         <h3>Release Date: {{movie?.release_date}}</h3>
     </div>
-    <h3>Prodction countrie(s): </h3>
-    <div class=" align-self-baseline  ">
+    
+    <div class=" half align-self-baseline  ">
+        <h3>Prodction countrie(s): </h3>
     <ul >
         <li  *ngFor="let gen of movie?.production_countries">{{gen.name}}</li>
     </ul>
     </div>
 </div>
-</div>
+</html>
 

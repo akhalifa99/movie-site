@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { RatingComponent } from './rating/rating.component';
 import { DetailsComponent } from './details/details.component';
-import { authGuard } from './guard/auth.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 // const appRoutes: Routes = [
 //   {path:'', component: LoginComponent},
@@ -24,7 +24,8 @@ import { authGuard } from './guard/auth.guard';
     LoginComponent,
     CatalogComponent,
     RatingComponent,
-    DetailsComponent
+    DetailsComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

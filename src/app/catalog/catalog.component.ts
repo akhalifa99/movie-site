@@ -20,11 +20,9 @@ export class CatalogComponent implements OnInit {
   }
 
   showTopRated(){
-    this.toprated.getTopRated().subscribe(res=>{
-      this.topRatedMovies=this.correctBackDropPath(res);
-    },
-    err=>{
-      console.log(err)
+    this.toprated.getTopRated().subscribe({
+      next:res=>this.topRatedMovies=this.correctBackDropPath(res),
+      error:err=>console.log(err)
     });
   }
   
