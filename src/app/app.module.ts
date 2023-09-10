@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,9 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { RatingComponent } from './rating/rating.component';
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 
 // const appRoutes: Routes = [
 //   {path:'', component: LoginComponent},
@@ -31,7 +34,16 @@ import { LogoutComponent } from './logout/logout.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot(
+      {
+        // loader:{
+        //   provide:TranslateLoader,
+        //   useFactory:createTranslateLoader,
+        //   deps:[HttpClient]
+        // }
+      }
+    )
     
     
   ],
@@ -41,3 +53,7 @@ import { LogoutComponent } from './logout/logout.component';
 
 
 export class AppModule { }
+
+export function httpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http,"./assets/i18n",'.json')
+}

@@ -3,7 +3,7 @@
 
 <div class="mgt-2">
     <img src={{movie?.backdrop_path}} >
-    <h1 >{{movie?.original_title}}  <small class="opacity-75">({{movie?.vote_average}})</small></h1>
+    <h1 >{{movie?.original_title|uppercase}} <small class="opacity-75">({{movie?.vote_average}})</small></h1>
     <h4>{{movie?.overview}}</h4>
 </div>
 <div class="d-flex flex-wrap ">
