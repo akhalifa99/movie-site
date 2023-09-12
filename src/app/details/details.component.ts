@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { movieDetails } from '../models/movieDetails';
 import { TopratedService } from '../catalog/toprated.service';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-details',

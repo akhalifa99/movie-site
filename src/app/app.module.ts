@@ -12,9 +12,8 @@ import { RatingComponent } from './shared/rating/rating.component';
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './shared/logout/logout.component';
 
-import { catalogModule } from './catalog/catalog.module';
-import { detailsModule } from './details/detail.module';
 import { authModule } from './login/auth.module';
+import { coreModule } from './core.module';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -34,9 +33,8 @@ import { authModule } from './login/auth.module';
   ],
   imports: [
     authModule,
+    coreModule,
     RouterModule,
-    detailsModule,
-    catalogModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
