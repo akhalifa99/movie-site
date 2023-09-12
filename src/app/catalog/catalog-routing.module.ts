@@ -7,7 +7,7 @@ import { CatalogComponent } from './catalog.component';
 
 const routes:Routes=[
     {path:'catalog', component: CatalogComponent,canActivate:[authGuard]},
-    {path:'catalog/:id', component: DetailsComponent,canActivate:[authGuard]}
+    
 
 ]
 

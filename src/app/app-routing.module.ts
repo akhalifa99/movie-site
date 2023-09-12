@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {path:'', component: LoginComponent},
   {path:'catalog',loadChildren: () => import('./catalog/catalog.module').then(x => x.catalogModule)},
-  
+  {path:'catalog/:id', component: DetailsComponent,canActivate:[authGuard]}
   
 ];
 

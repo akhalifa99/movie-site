@@ -11,10 +11,10 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { RatingComponent } from './shared/rating/rating.component';
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './shared/logout/logout.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { CommonModule } from '@angular/common';
+
 import { catalogModule } from './catalog/catalog.module';
+import { detailsModule } from './details/detail.module';
+import { authModule } from './login/auth.module';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -27,28 +27,20 @@ import { catalogModule } from './catalog/catalog.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    
     //NgbModule
    
     
   ],
   imports: [
+    authModule,
+    RouterModule,
+    detailsModule,
     catalogModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
-    CommonModule,
-    TranslateModule.forRoot(
-      {
-        defaultLanguage:'en',
-        loader:{
-          provide:TranslateLoader,
-          useFactory:createTranslateLoader,
-          deps:[HttpClient]
-        }
-      }
-    )
+    
     
     
     
@@ -60,6 +52,4 @@ import { catalogModule } from './catalog/catalog.module';
 
 export class AppModule { }
 
-export function createTranslateLoader(http:HttpClient){
-  return new TranslateHttpLoader(http,"./assets/i18n/",'.json')
-}
+
