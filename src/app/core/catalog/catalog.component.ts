@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TopratedService } from './toprated.service';
-import { Movie } from '../models/movie';
+import { Movie } from '../../models/movie';
 import { environment } from 'src/environments/environment.prod';
 
 

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import * as users from '../../assets/users.json';
+import * as users from '../../../assets/users.json';
 
 // import * as fs from 'fs';
 // import * as csv from 'csv-parser';

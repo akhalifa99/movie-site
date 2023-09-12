@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
-import * as users from '../../assets/users.json';
+import * as users from '../../../assets/users.json'
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

@@ -4,10 +4,10 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { CatalogComponent } from './catalog.component';
 
-import { LoginService } from '../login/login.service';
+import { LoginService } from '../../auth/login/login.service';
 import { CUSTOM_ELEMENTS_SCHEMA, DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { Movie } from '../models/movie';
+import { Movie } from '../../models/movie';
 import { TopratedService } from './toprated.service';
 
 const movie:Movie={

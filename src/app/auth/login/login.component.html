@@ -1,13 +1,14 @@
 <div class="container  ">
 <div class="row row-m-t ">
     <nav>
-        
         <a  class="'navbar-brand'"  href="#">
           <img src="../../assets/images/M.png" width="30" height="30" class="d-inline-block align-top" alt="">
           Movies.com
         </a>
-    
-       
+        <div class="ar d-flex ">
+        <button type="button" class="btn btn-danger   "(click)="onClicken()">EN</button>
+        <button type="button" class="btn btn-danger   "(click)="onClickar()">AR</button>
+        </div>
     </nav>
 </div>
 <!--[ngClass]="{ar:!en}"-->
@@ -28,8 +29,7 @@
             <div>
                 <button type="submit" class="btn btn-primary" [disabled]="!LoginForm.valid">{{'LOGIN'|translate}}</button>
             </div>
-            <button type="button" class="btn btn-danger row-m-t "(click)="onClicken()">EN</button>
-            <button type="button" class="btn btn-danger row-m-t "(click)="onClickar()">AR</button>
+            
             <div class="alert alert-danger row-m-t" *ngIf="!LoginForm.valid&&LoginForm.touched"><span>Enter valid email and password</span></div>
             <div class="alert alert-danger row-m-t" *ngIf="!login"><span>User does not exist</span></div>
         </form>
