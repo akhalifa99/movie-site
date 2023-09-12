@@ -7,8 +7,9 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
-  {path:'catalog', component: CatalogComponent,canActivate:[authGuard]},
-  {path:'catalog/:id', component: DetailsComponent,canActivate:[authGuard]}
+  {path:'catalog',loadChildren: () => import('./catalog/catalog.module').then(x => x.catalogModule)},
+  
+  
 ];
 
 @NgModule({

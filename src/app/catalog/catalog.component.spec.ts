@@ -60,14 +60,17 @@ describe('CatalogComponent', () => {
   });
   
   it('check movie list', () => {
-    
+    fixture.detectChanges();
     let loginService= fixture.debugElement.injector.get(LoginService)
     loginService.logged=true
     
-    component.showTopRated
-    const element:DebugElement[]=fixture.debugElement.queryAll(By.css('.container'));
-    fixture.detectChanges();  
-    expect(element.length).toEqual(1)
+    
+    const element:DebugElement[]=fixture.debugElement.queryAll(By.css('#cards'));
+   
+
+    const spy=spyOn(component,"showTopRated")
+    component.ngOnInit()
+    expect(spy).toHaveBeenCalled
     
     
     

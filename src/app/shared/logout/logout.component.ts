@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from '../../login/login.component';
 import {  Router } from '@angular/router';
-import { LoginService } from '../login/login.service';
+import { LoginService } from '../../login/login.service';
 
 @Component({
   selector: 'app-logout',

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TopratedService } from './toprated.service';
 import { Movie } from '../models/movie';
+import { environment } from 'src/environments/environment.development';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class CatalogComponent implements OnInit {
   correctBackDropPath(movie:Movie):Movie{
     if(movie.results){
       movie.results.forEach(result=>{
-        result.backdrop_path='https://image.tmdb.org/t/p/w500'+result.backdrop_path+'?api_key=eea415e0b7d5bbde4000f7318ef220b7'
+        result.backdrop_path='https://image.tmdb.org/t/p/w500'+result.backdrop_path+'?api_key='+environment.Api_key
         })
         
     }

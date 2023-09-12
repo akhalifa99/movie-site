@@ -22,6 +22,7 @@
     "@ngx-translate/http-loader": "^6.0.0",
     "bootstrap": "^4.6.2",
     "file-system": "^1.2.2",
+    "jquery": "^3.7.1",
     "metro4": "^4.3.10",
     "rxjs": "~7.8.0",
     "stream": "^0.0.2",

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 import * as users from '../../assets/users.json';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,10 @@ import * as users from '../../assets/users.json';
 })
 export class LoginComponent implements OnInit{
   
-  constructor(private loginService:LoginService,private route:Router){
+  constructor(private loginService:LoginService,private route:Router,public translate:TranslateService){
 
   }
+  en:boolean=true;
   login:boolean=true;
   users:any = users;
   ngOnInit() {
@@ -32,6 +34,15 @@ export class LoginComponent implements OnInit{
     else{
       console.log('user doesnt exist')
     }
+  }
+
+  onClicken(){
+    this.translate.use('en')
+    this.en=true
+  }
+  onClickar(){
+    this.translate.use('ar')
+    this.en=false
   }
 
 }

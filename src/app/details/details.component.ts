@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { movieDetails } from '../models/movieDetails';
 import { TopratedService } from '../catalog/toprated.service';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-details',
@@ -26,9 +27,9 @@ movies=this.mService.movies
   }
 
   showDetails(){
-    this.http.get<movieDetails>('https://api.themoviedb.org/3/movie/'+this.id+'?api_key=eea415e0b7d5bbde4000f7318ef220b7').subscribe(res=>{
+    this.http.get<movieDetails>('https://api.themoviedb.org/3/movie/'+this.id+'?api_key='+environment.Api_key).subscribe(res=>{
       this.movie=res
-      this.movie.backdrop_path= 'https://image.tmdb.org/t/p/w500'+this.movie.backdrop_path+'?api_key=eea415e0b7d5bbde4000f7318ef220b7'
+      this.movie.backdrop_path= 'https://image.tmdb.org/t/p/w500'+this.movie.backdrop_path+'?api_key='+environment.Api_key
       
     },
     err=>{
