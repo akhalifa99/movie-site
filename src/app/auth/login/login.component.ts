@@ -19,7 +19,12 @@ export class LoginComponent implements OnInit{
   login:boolean=true;
   users:any = users;
   ngOnInit() {
-   console.log(Object.keys(users).length);
+   if(localStorage.getItem('lang')==='en'){
+    this.en=true
+   }
+   else{
+    this.en=false
+   }
   }
 
   onSubmit(form: NgForm){
@@ -39,10 +44,12 @@ export class LoginComponent implements OnInit{
   onClicken(){
     this.translate.use('en')
     this.en=true
+    localStorage.setItem('lang','en')
   }
   onClickar(){
     this.translate.use('ar')
     this.en=false
+    localStorage.setItem('lang','ar')
   }
 
 }

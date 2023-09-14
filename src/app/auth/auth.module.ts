@@ -8,6 +8,8 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { sharedModule } from "../shared/shared.module";
 import { LoginComponent } from "./login/login.component";
 
+
+
 @NgModule({
     declarations:[LoginComponent],
     imports:[
@@ -16,7 +18,7 @@ import { LoginComponent } from "./login/login.component";
         sharedModule,
         TranslateModule.forRoot(
             {
-              defaultLanguage:'en',
+              defaultLanguage:localStorage.getItem('lang'),
               loader:{
                 provide:TranslateLoader,
                 useFactory:createTranslateLoader,
@@ -29,9 +31,10 @@ import { LoginComponent } from "./login/login.component";
 
 })
 
-export class authModule{}
+export class authModule{
+  
+}
 
-export class AppModule { }
 
 export function createTranslateLoader(http:HttpClient){
   return new TranslateHttpLoader(http,"./assets/i18n/",'.json')

@@ -13,20 +13,21 @@
 </div>
 <!--[ngClass]="{ar:!en}"-->
 <div class="row row-m-t center  " >
+   
     <div class="col-xs-8">
         <div><img src="../../assets/images/M.png" width="200" height="200" class="d-inline-block align-top" alt=""></div>
         <div><h1>Movies.com</h1></div>
         <form #LoginForm="ngForm" (ngSubmit)="onSubmit(LoginForm)">
-            <div class="form-group">
-                <label  for="email">{{'EMAIL'|translate}}</label>
+            <div class="form-group d-flex flex-column">
+                <label [ngClass]="{'ar1':!en}" for="email">{{'EMAIL'|translate}}</label>
                 <input type="email" id="email" class="form-control" ngModel name="email" required email>
             </div>
-            <div class="form-group">
-                <label for="password">{{"PASSWORD"|translate}}</label>
+            <div class="form-group d-flex flex-column">
+                <label [ngClass]="{'ar1':!en}"  for="password">{{"PASSWORD"|translate}}</label>
                 <input type="password" id="password" class="form-control" ngModel name="password" required minlength="8">
             </div>
             <div>
-                <button type="submit" class="btn btn-primary" [disabled]="!LoginForm.valid">{{'LOGIN'|translate}}</button>
+                <button type="submit" [ngClass]="{'ar1':!en}" class="btn btn-primary " [disabled]="!LoginForm.valid">{{'LOGIN'|translate}}</button>
             </div>
             
             <div class="alert alert-danger row-m-t" *ngIf="!LoginForm.valid&&LoginForm.touched"><span>Enter valid email and password</span></div>

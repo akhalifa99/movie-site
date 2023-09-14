@@ -6,10 +6,21 @@
 .ar{
     position: absolute;
     right: 2%;
-    top: 1%;
+    top: 5%;
     
 
 }
+
+button.ar1{
+  float: right;
+    
+  }
+
+label.ar1{
+    text-align: right;
+      
+    }
+
 nav{
     position: relative;
     width: 100%;
@@ -39,4 +50,8 @@ nav{
   button{
     margin-right: 3%;
 
+  }
+
+  .form-group{
+    position: relative;
   }
