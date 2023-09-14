@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CatalogComponent } from './core/catalog/catalog.component';
-import { DetailsComponent } from './core/details/details.component';
-import { authGuard } from './auth/guard/auth.guard';
+
 import { LoginComponent } from './auth/login/login.component';
+import { logoutGuard } from './auth/guard/logout.guard';
 
 const routes: Routes = [
-  {path:'', component: LoginComponent},
+  {path:'', component: LoginComponent,canActivate:[logoutGuard]},
   {path:'catalog',loadChildren: () => import('./core/core.module').then(x => x.coreModule)},
   
   
