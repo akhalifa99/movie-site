@@ -10,7 +10,9 @@ import { LoginComponent } from "./login/login.component";
 
 @NgModule({
     declarations:[LoginComponent],
-    imports:[FormsModule,
+    imports:[
+        RouterModule,
+        FormsModule,
         sharedModule,
         TranslateModule.forRoot(
             {

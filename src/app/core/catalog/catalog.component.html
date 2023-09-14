@@ -9,8 +9,9 @@
                 <h5 class="card-title">{{mov.title}}</h5>
                 <app-rating class="card-text rate rate-mar" [rating]="mov.vote_average" ></app-rating>
                 <p class="card-text overview">{{mov.overview}}</p>
-                <a [routerLink]="['./',mov.id] "class="btn btn-primary">Details</a>
+                <a [routerLink]="['./',mov.id]" class="btn btn-primary">Details</a>
             </div>
         </div>
     </div>    
 </div>
+

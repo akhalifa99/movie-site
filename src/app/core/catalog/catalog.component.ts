@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { TopratedService } from './toprated.service';
 import { Movie } from '../../models/movie';
 import { environment } from 'src/environments/environment.prod';
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -9,7 +10,7 @@ import { environment } from 'src/environments/environment.prod';
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css']
 })
-export class CatalogComponent implements OnInit {
+export class CatalogComponent implements OnInit,OnDestroy {
   topRatedMovies !: Movie;
   
   constructor(private toprated:TopratedService){
@@ -18,6 +19,11 @@ export class CatalogComponent implements OnInit {
   
   ngOnInit(): void {
     this.showTopRated()
+  }
+
+  @HostListener('unloaded')
+  ngOnDestroy(): void {
+    
   }
 
   showTopRated(){

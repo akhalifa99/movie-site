@@ -6,13 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CatalogComponent } from './core/catalog/catalog.component';
-import { RatingComponent } from './shared/rating/rating.component';
-import { DetailsComponent } from './core/details/details.component';
-import { LogoutComponent } from './shared/logout/logout.component';
+
 
 import { authModule } from './auth/auth.module';
 import { coreModule } from './core/core.module';
+import { CommonModule } from '@angular/common';
+
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -24,7 +23,7 @@ import { coreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
     
     //NgbModule
    
@@ -32,11 +31,11 @@ import { coreModule } from './core/core.module';
   ],
   imports: [
     authModule,
-    coreModule,
     RouterModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    CommonModule
     
     
     

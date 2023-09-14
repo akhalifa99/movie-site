@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { LogoutComponent } from "./logout/logout.component";
 import { RatingComponent } from "./rating/rating.component";
@@ -11,7 +12,8 @@ declarations:[
     LogoutComponent,
     RatingComponent
 ],
-imports:[CommonModule],
+imports:[CommonModule
+],
 exports:[ 
     LogoutComponent,
     RatingComponent,
