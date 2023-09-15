@@ -4,7 +4,8 @@ import { DetailsComponent } from "./details/details.component";
 import { sharedModule } from "../shared/shared.module";
 import { RouterModule } from "@angular/router";
 import { catalogRoutingModule } from "./catalog-routing.module";
-import { AppModule } from "../app.module";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -19,7 +20,8 @@ import { AppModule } from "../app.module";
     imports:[
         sharedModule,
         catalogRoutingModule,
-        RouterModule
+        RouterModule,
+        MatProgressSpinnerModule
     ]
 
 })

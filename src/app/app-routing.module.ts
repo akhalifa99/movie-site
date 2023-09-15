@@ -7,6 +7,7 @@ import { logoutGuard } from './auth/guard/logout.guard';
 const routes: Routes = [
   {path:'', component: LoginComponent,canActivate:[logoutGuard]},
   {path:'catalog',loadChildren: () => import('./core/core.module').then(x => x.coreModule)},
+  {path:'**',redirectTo:'catalog'}
   
   
 ];

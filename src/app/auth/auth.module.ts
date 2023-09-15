@@ -7,11 +7,12 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { sharedModule } from "../shared/shared.module";
 import { LoginComponent } from "./login/login.component";
+import { SignupComponent } from './signup/signup.component';
 
 
 
 @NgModule({
-    declarations:[LoginComponent],
+    declarations:[LoginComponent, SignupComponent],
     imports:[
         RouterModule,
         FormsModule,

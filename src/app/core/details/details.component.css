@@ -1,6 +1,6 @@
-.backdb{
-    background-color: rgba(2, 2, 79, 0.95);
-}
+:host {
+    background-color: black;
+  }
 html{
     background-color: black;
     height: 100vmax;
@@ -16,10 +16,7 @@ h4{
     color: antiquewhite;
 }
 
-img{
-    width: 50%;
-    
-}
+
 small{
     opacity: 0.7;
     font-size: smaller;

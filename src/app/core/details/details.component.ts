@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { movieDetails } from '../../models/movieDetails';
 import { TopratedService } from '../catalog/toprated.service';
 import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-details',
@@ -14,6 +15,7 @@ export class DetailsComponent implements OnInit {
 
   id: number
   movie !: movieDetails;
+  fetching:boolean=true
   
 
 constructor(private route:ActivatedRoute, private http: HttpClient, private mService: TopratedService){}
@@ -35,6 +37,15 @@ movies=this.mService.movies
     err=>{
       console.log(err)
     });
+   
+  }
+
+  loaded(){
+    
+      this.fetching=false
+      
+    
+
   }
 
 

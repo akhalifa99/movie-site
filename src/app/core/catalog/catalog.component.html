@@ -1,6 +1,5 @@
-<app-logout>
-    
-</app-logout>
+<app-logout>   </app-logout>
+<mat-spinner *ngIf="fetching"></mat-spinner>
 <div class="container" >
     <div class="row">
         <div class="card col-lg-3 col-md-4 col-sm-6 col-12  " id="cards"  *ngFor="let mov of topRatedMovies?.results,let i = index">

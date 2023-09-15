@@ -12,6 +12,7 @@ import { Router } from "@angular/router";
 })
 export class CatalogComponent implements OnInit,OnDestroy {
   topRatedMovies !: Movie;
+  fetching:boolean=true;
   
   constructor(private toprated:TopratedService){
 
@@ -31,6 +32,7 @@ export class CatalogComponent implements OnInit,OnDestroy {
       next:res=>this.topRatedMovies=this.correctBackDropPath(res),
       error:err=>console.log(err)
     });
+    this.fetching=false;
   }
   
   correctBackDropPath(movie:Movie):Movie{
@@ -40,6 +42,7 @@ export class CatalogComponent implements OnInit,OnDestroy {
         })
         
     }
+  
     return movie;
   }
 }
