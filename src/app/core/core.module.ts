@@ -3,7 +3,7 @@ import { CatalogComponent } from "./catalog/catalog.component";
 import { DetailsComponent } from "./details/details.component";
 import { sharedModule } from "../shared/shared.module";
 import { RouterModule } from "@angular/router";
-import { catalogRoutingModule } from "./catalog-routing.module";
+import { coreRoutingModule } from "./core-routing.module";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
@@ -19,7 +19,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     
     imports:[
         sharedModule,
-        catalogRoutingModule,
+        coreRoutingModule,
         RouterModule,
         MatProgressSpinnerModule
     ]

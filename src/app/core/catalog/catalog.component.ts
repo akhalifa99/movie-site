@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { TopratedService } from './toprated.service';
+import { Component, OnInit } from '@angular/core';
+import { TopratedService } from '../../services/toprated.service';
 import { Movie } from '../../models/movie';
 import { environment } from 'src/environments/environment.prod';
-import { Router } from "@angular/router";
+
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css']
 })
-export class CatalogComponent implements OnInit,OnDestroy {
+export class CatalogComponent implements OnInit {
   topRatedMovies !: Movie;
   fetching:boolean=true;
   
@@ -22,10 +22,7 @@ export class CatalogComponent implements OnInit,OnDestroy {
     this.showTopRated()
   }
 
-  @HostListener('unloaded')
-  ngOnDestroy(): void {
-    
-  }
+
 
   showTopRated(){
     this.toprated.getTopRated().subscribe({

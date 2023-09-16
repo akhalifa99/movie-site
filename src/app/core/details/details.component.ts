@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { movieDetails } from '../../models/movieDetails';
-import { TopratedService } from '../catalog/toprated.service';
+import { TopratedService } from '../../services/toprated.service';
 import { environment } from 'src/environments/environment.prod';
 
 

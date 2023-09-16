@@ -18,4 +18,4 @@ const routes:Routes=[
   })
 
 
-export class catalogRoutingModule{}
+export class coreRoutingModule{}

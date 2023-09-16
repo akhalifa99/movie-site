@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { signupService } from './signup.service';
+import { signupService } from '../../services/signup.service';
 
 @Component({
   selector: 'app-signup',

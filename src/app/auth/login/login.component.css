@@ -55,3 +55,16 @@ nav{
   .form-group{
     position: relative;
   }
+
+  .imgSize{
+    width: 200px;
+    height: 200px;
+  }
+
+  @media only screen and (max-width: 900px), 
+  screen and (max-height: 500px){
+    
+    .imgSize{   transform: scale(0.6);}
+    h1{font-size:medium;
+      text-align: center;}
+}

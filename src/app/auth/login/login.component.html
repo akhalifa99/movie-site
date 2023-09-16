@@ -15,7 +15,7 @@
 <div class="row row-m-t center  " >
    
     <div class="col-xs-8">
-        <div><img src="../../assets/images/M.png" width="200" height="200" class="d-inline-block align-top" alt=""></div>
+        <img src="../../assets/images/M.png"  class="imgSize" alt="">
         <div><h1>Movies.com</h1></div>
         <form #LoginForm="ngForm" (ngSubmit)="onSubmit(LoginForm)">
             <div class="form-group d-flex flex-column">
@@ -27,7 +27,7 @@
                 <input type="password" id="password" class="form-control" ngModel name="password" required minlength="8">
             </div>
             <div>
-                <button type="button" routerLink="signup" [ngClass]="{'ar1':!en}" class="btn btn-primary " >{{'signup'|translate}}</button>
+                <button type="button" routerLink="signup" [ngClass]="{'ar1':!en}" class="btn btn-primary " >{{'SIGNUP'|translate}}</button>
                 <button type="submit" [ngClass]="{'ar1':!en}" class="btn btn-primary " [disabled]="!LoginForm.valid">{{'LOGIN'|translate}}</button>
             </div>
             
