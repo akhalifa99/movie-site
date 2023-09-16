@@ -11,7 +11,7 @@
         </div>
     </nav>
 </div>
-<!--[ngClass]="{ar:!en}"-->
+
 <div class="row row-m-t center  " >
    
     <div class="col-xs-8">
@@ -27,6 +27,7 @@
                 <input type="password" id="password" class="form-control" ngModel name="password" required minlength="8">
             </div>
             <div>
+                <button type="button" routerLink="signup" [ngClass]="{'ar1':!en}" class="btn btn-primary " >{{'signup'|translate}}</button>
                 <button type="submit" [ngClass]="{'ar1':!en}" class="btn btn-primary " [disabled]="!LoginForm.valid">{{'LOGIN'|translate}}</button>
             </div>
             

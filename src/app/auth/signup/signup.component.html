@@ -1,1 +1,38 @@
-<p>signup works!</p>
+<div class="container  ">
+    <div class="row row-m-t ">
+        <nav>
+            <a  class="'navbar-brand'"  href="#">
+              <img src="../../assets/images/M.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Movies.com
+            </a>
+            <div class="ar d-flex ">
+            <button type="button" class="btn btn-danger   "(click)="onClicken()">EN</button>
+            <button type="button" class="btn btn-danger   "(click)="onClickar()">AR</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row row-m-t center  " >
+       
+        <div class="col-xs-8">
+            <div><img src="../../assets/images/M.png" width="200" height="200" class="d-inline-block align-top" alt=""></div>
+            <div><h1>Movies.com</h1></div>
+            <form #SignupForm="ngForm" (ngSubmit)="onSubmit(SignupForm)">
+                <div class="form-group d-flex flex-column">
+                    <label [ngClass]="{'ar1':!en}" for="email">{{'EMAIL'|translate}}</label>
+                    <input type="email" id="email" class="form-control" ngModel name="email" required email>
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label [ngClass]="{'ar1':!en}"  for="password">{{"PASSWORD"|translate}}</label>
+                    <input type="password" id="password" class="form-control" ngModel name="password" required minlength="8">
+                </div>
+                <div>
+                    <button type="submit" [ngClass]="{'ar1':!en}" class="btn btn-primary " [disabled]="!SignupForm.valid">{{'SIGNUP'|translate}}</button>
+                </div>
+                
+                <div class="alert alert-danger row-m-t" *ngIf="!SignupForm.valid&&SignupForm.touched"><span>Enter valid email and password</span></div>
+                <div class="alert alert-danger row-m-t" *ngIf="!signup"><span>User already exists</span></div>
+            </form>
+        </div>
+    </div>
+    </div>

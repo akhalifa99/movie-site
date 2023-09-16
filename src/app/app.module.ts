@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,23 +9,18 @@ import { AppComponent } from './app.component';
 
 
 import { authModule } from './auth/auth.module';
-import { coreModule } from './core/core.module';
+
 import { CommonModule } from '@angular/common';
+import { UsersJsonComponent } from './users.json/users.json.component';
 
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
-// const appRoutes: Routes = [
-//   {path:'', component: LoginComponent},
-//   {path:'catalog', component: CatalogComponent,canActivate:[authGuard]},
-//   {path:'catalog/:id', component: DetailsComponent,canActivate:[authGuard]}
-// ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsersJsonComponent
     
-    //NgbModule
+   
    
     
   ],

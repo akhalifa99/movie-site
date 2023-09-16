@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { AppModule } from "../app.module";
 
 import { sharedModule } from "../shared/shared.module";
 import { LoginComponent } from "./login/login.component";

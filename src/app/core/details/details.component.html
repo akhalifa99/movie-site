@@ -1,6 +1,8 @@
 <html>
 
-<app-logout></app-logout>
+<div class="logout-bgc"></div>
+
+<app-logout ></app-logout>
 <div class="mgt-2">
     <mat-spinner *ngIf="fetching"></mat-spinner>
     <img src={{movie?.backdrop_path}} (load)="loaded()">

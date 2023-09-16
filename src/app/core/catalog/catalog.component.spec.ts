@@ -10,6 +10,7 @@ import { By } from '@angular/platform-browser';
 import { Movie } from '../../models/movie';
 import { TopratedService } from './toprated.service';
 
+
 const movie:Movie={
   "page": 1,
   "results": [

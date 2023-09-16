@@ -2,5 +2,6 @@
     "EMAIL":"Email",
     "PASSWORD":"Password",
     "LOGIN":"Login",
-    "LOGOUT":"Logout"
+    "LOGOUT":"Logout",
+    "SIGNUP":"Signup"
 }

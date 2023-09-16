@@ -1,10 +1,13 @@
-:host {
-    background-color: black;
-  }
+
 html{
     background-color: black;
     height: 100vmax;
 }
+.logout-bgc{
+    background-color: black;
+    height: 1%;
+}
+
 .mgt-2{
     margin-top: 2%;
 }
